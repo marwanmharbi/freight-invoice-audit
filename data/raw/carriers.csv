@@ -1,0 +1,7 @@
+carrier_id,carrier_name,mode,payment_terms
+CAR001,Skybridge Air Cargo,AIR,NET30
+CAR002,Meridian Airfreight,AIR,NET45
+CAR003,Bluewater Ocean Lines,OCEAN,NET30
+CAR004,Harborlink Shipping,OCEAN,NET60
+CAR005,Lone Star Trucking,ROAD,NET30
+CAR006,Gulf Coast Haulage,ROAD,NET15
