@@ -49,8 +49,8 @@ flagged AS (
 
         -- YOUR TURN: this rule is switched off. Replace the 0 with a CASE
         -- expression that returns 1 when the invoice has no matching shipment.
-        0                                                           AS is_ghost_shipment,
 
+        CASE WHEN x.ship_date IS NULL THEN 1 ELSE 0 END              AS is_ghost_shipment,
         CASE WHEN x.occurrence_no > 1 THEN 1 ELSE 0 END             AS is_duplicate_same_number,
 
         CASE WHEN x.ship_date IS NOT NULL
