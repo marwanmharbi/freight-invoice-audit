@@ -31,3 +31,4 @@ if __name__ == "__main__":
     with get_engine().connect() as conn:
         row = conn.exec_driver_sql("SELECT DB_NAME(), @@SERVERNAME").fetchone()
         print(f"Connected to database {row[0]} on server {row[1]}")
+        
