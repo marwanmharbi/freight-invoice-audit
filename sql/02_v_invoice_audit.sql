@@ -47,7 +47,7 @@ flagged AS (
         ROUND(x.expected_linehaul * (1 + x.fuel_surcharge_pct)
               + COALESCE(x.approved_amount, 0), 2)                  AS expected_total,
 
-        -- YOUR TURN: this rule is switched off. Replace the 0 with a CASE
+        -- no shipment record matched this invoice
         -- expression that returns 1 when the invoice has no matching shipment.
 
         CASE WHEN x.ship_date IS NULL THEN 1 ELSE 0 END              AS is_ghost_shipment,
